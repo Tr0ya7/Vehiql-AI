@@ -9,8 +9,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -39,6 +37,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -65,15 +64,24 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
 
-
-
-@layer base {
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .gradient-title {
+    @apply bg-gradient-to-br from-blue-500 to-green-500 font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
+  }
+}
+
+.dotted-background {
+  background-color: #16223c;
+  background-image: radial-gradient(rgba(255, 255, 255, .28) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
