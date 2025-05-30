@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "./ui/button"
 import { ArrowLeft, CarFront, Heart, Layout } from "lucide-react"
 
-const Header = /* async */ ({ isAdminPage = false }: { isAdminPage: boolean }) => { 
+const Header = /* async */ ({ isAdminPage = false }: { isAdminPage?: boolean }) => { 
     const isAdmin = false
     
     return (
